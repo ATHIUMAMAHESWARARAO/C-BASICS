@@ -1,48 +1,64 @@
 #include<stdio.h>
 void main()
 {
-	int eng, mat, phy, che, cs, total;
-	double perc;
-	printf("enter marks eng, mat, phy, che, cs");
-	scanf("%d%d%d%d%d", &eng, &mat, &phy, &che, &cs);
-	total = eng + mat + phy + che + cs;
-	perc = (total*1.0/5);
-	
-	if(eng>=35 && mat>=35 && phy>=35 && che>=35 && cs>=35)
+	int E,P,M,C,CS,tot;
+	float per;
+	printf("Enter Marks:");
+	scanf("%d%d%d%d%d",&E,&P,&M,&C,&CS);
+	tot=E+P+M+C+CS;
+	per=tot*1.0/5;
+	if(E>35 && P>35 && M>35 && C>35 && CS>35)
 	{
-		printf("Results: pass\n");
-		printf("total marks out of 500 is %d\n", total);
-		printf("Percentage: %f\n", perc);
-		printf("Grade: ");
-		if(perc>=90)
+		printf("pass");
+		if(per>=90)
 		{
-			printf("O");
+			printf("O Grade and percentage is %f\n",per);
 		}
-		else if(perc>=80)
+		else if(per>=80)
 		{
-			printf("A");
+			printf("A Grade and percentage is %f\n",per);
 		}
-		else if(perc>=70)
+		else if(per>=70)
 		{
-			printf("B");
+			printf("B Grade and  percentage is %f\n",per);
 		}
-		else if(perc>=60)
+		else if(per>=60)
 		{
-			printf("C");
+			printf("C Grade and percentage is %f\n",per);
 		}
-		else if(perc>=50)
+		else if(per>=50)
 		{
-			printf("D");
+			printf("D Grade and percentage is %f\n",per);
 		}
-		else if(perc<=40)
+		else if(per<50)
 		{
-			printf("F");
+			printf("E Grade and percentage is %f\n",per);
 		}
-	}
+}
 	else
 	{
-		printf("fail");
-	}
-}
-	
+		printf("fail\n");
+		if(E<35)
+		{
+			printf("In English you have failed by %d Marks \n",35-E);
+		}
+		if(P<35)
+		{
+			printf("In Physics you have failed by %d Marks \n",35-P);
+		}
+		if(M<35)
+		{
+			printf("In Maths you have failed by %d Marks \n",35-M);
+		}
+		if(C<35)
+		{
+			printf("In Chemistry you have failed by %d Marks \n",35-C);
+		}
+		if(CS<35)
+		{
+			printf("In Computer science you have failed by %d Marks\n ",35-CS);
+		}
+	}       
+} 
+			
 	
