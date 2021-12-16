@@ -1,17 +1,16 @@
 #include<stdio.h>
 void main()
 {
-	int choice, ac, rc, bc;
-	int a, b;
+	int choice, ac, rc, bc, a, b;
 	printf("enter your number"); 
 	scanf("%d%d", &a, &b);
 	printf("enter your choice:\n1. Arthematic Operators\n2. Relative Operators\n3. Bitwise Operators");
-	scanf("%d", choice);
+	scanf("%d", &choice);
 	switch(choice)
 	{
 		case 1:
 			printf("enter your choice\n1. +\n2. -\n3. *\n4. /\n5. %%");
-			scanf("%d", ac);
+			scanf("%d", &ac);
 			switch(ac)
 			{
 				case 1:
@@ -33,7 +32,7 @@ void main()
 		
 		case 2:
 		    printf("enter your choice\n1. >\n2. >=\n3. <\n4. <=\n5. ==\n6. !=");
-			scanf("%d", rc);
+			scanf("%d", &rc);
 			switch(rc)
 			{
 				case 1:
@@ -58,7 +57,7 @@ void main()
 			
 		case 3:
 			printf("enter your choice\n1. &\n2. |\n3. ^");
-			scanf("%d", bc);
+			scanf("%d", &bc);
 			switch(bc)
 			{
 				case 1:
